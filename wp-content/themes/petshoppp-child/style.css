@@ -1,0 +1,466 @@
+/*
+Theme Name: Petshop Child
+Template: astra
+*/
+
+/* style.css - единый файл стилей для сайта "Услуги для домашних животных" */
+
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #fff9f0 0%, #fff0e0 100%);
+    color: #4a3b2c;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Контейнер для ограничения ширины */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Бегущая строка */
+.marquee {
+    background: linear-gradient(90deg, #ff6b6b, #ff8e53, #ff6b6b);
+    color: white;
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.marquee span {
+    display: inline-block;
+    animation: marquee 20s linear infinite;
+    padding-left: 100%;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+/* Заголовки */
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 30px 0 20px;
+    color: #ff8c42;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.8em;
+    margin: 30px 0 20px;
+    color: #ff8c42;
+    border-bottom: 3px solid #ffd93d;
+    display: inline-block;
+    padding-bottom: 10px;
+    width: auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h3 {
+    font-size: 1.4em;
+    margin: 20px 0 15px;
+    color: #ff8c42;
+    text-align: center;
+}
+
+/* Навигация */
+.navbar {
+    background: white;
+    border-radius: 50px;
+    padding: 15px;
+    margin: 20px 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4a3b2c;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+}
+
+.nav-links a:hover {
+    background: #ff8c42;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Галерея изображений */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.photo-card {
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    flex: 1;
+    min-width: 250px;
+}
+
+.photo-card:hover {
+    transform: translateY(-5px);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.photo-card p {
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Списки */
+.info-list {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.info-list ul, .info-list ol {
+    padding-left: 30px;
+}
+
+.info-list li {
+    margin: 10px 0;
+    font-size: 1.05em;
+}
+
+/* Таблицы */
+.table-container {
+    overflow-x: auto;
+    margin: 25px 0;
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.pricing-table th {
+    background: #ff8c42;
+    color: white;
+    padding: 15px;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.pricing-table td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.pricing-table tr:hover {
+    background: #fff5e8;
+}
+
+/* Контактная информация */
+.contact-info {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 25px 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.contact-info p {
+    margin: 12px 0;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #ff8c42;
+}
+
+/* Форма обратной связи */
+.form-container {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 25px 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ff8c42;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ffe0b5;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #ff8c42;
+    box-shadow: 0 0 0 3px rgba(255,140,66,0.1);
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    justify-content: center;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn-submit, .btn-reset {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit {
+    background: #ff8c42;
+    color: white;
+}
+
+.btn-submit:hover {
+    background: #ff6b2c;
+    transform: translateY(-2px);
+}
+
+.btn-reset {
+    background: #e0e0e0;
+    color: #666;
+}
+
+.btn-reset:hover {
+    background: #d0d0d0;
+    transform: translateY(-2px);
+}
+
+.error-message {
+    color: #ff4444;
+    font-size: 0.85em;
+    margin-top: 5px;
+    display: block;
+    text-align: left;
+}
+
+.error-border {
+    border-color: #ff4444 !important;
+}
+
+.success-message {
+    background: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid #c3e6cb;
+}
+
+/* Кнопка наверх */
+.back-to-top {
+    text-align: right;
+    margin: 30px 0;
+}
+
+.back-to-top a {
+    color: #ff8c42;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.back-to-top a:hover {
+    background: #ff8c42;
+    color: white;
+}
+
+/* Подвал */
+.footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+    background: white;
+    border-radius: 15px;
+    color: #888;
+    font-size: 0.9em;
+}
+
+/* Разделитель */
+.divider {
+    border: none;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ffd93d, #ff8c42, #ffd93d, transparent);
+    margin: 20px 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    h2 {
+        font-size: 1.4em;
+        white-space: nowrap;
+    }
+    
+    h3 {
+        font-size: 1.2em;
+    }
+    
+    .nav-links {
+        gap: 10px;
+    }
+    
+    .nav-links a {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+    
+    .photo-card img {
+        height: 200px;
+    }
+    
+    .radio-group, .checkbox-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .form-buttons {
+        flex-direction: column;
+    }
+    
+    .contact-info p {
+        font-size: 0.95em;
+    }
+}
+
+/* Дополнительные стили для центрирования текста в ячейках таблицы */
+.pricing-table td:first-child {
+    text-align: left;
+    font-weight: 500;
+}
+
+/* Стили для выделения важной информации */
+.highlight {
+    background: #fff5e8;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 4px solid #ff8c42;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Стили для ссылок в контактной информации */
+.contact-info a {
+    color: #ff8c42;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #ff6b2c;
+    text-decoration: underline;
+}
+
+/* Анимация для бегущей строки на мобильных устройствах */
+@media (max-width: 480px) {
+    .marquee {
+        font-size: 12px;
+        padding: 8px 0;
+    }
+    
+    .marquee span {
+        animation: marquee 15s linear infinite;
+    }
+}
